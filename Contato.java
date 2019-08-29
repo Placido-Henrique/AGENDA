@@ -6,7 +6,7 @@ public class Contato {
 	private String sobrenome;
 	private String telefone;
 	
-	public void Contato(int indice,String nome, String sobrenome, String telefone) {
+	public Contato (int indice,String nome, String sobrenome, String telefone) {
 		this.indice = indice - 1;
 		this.nome = nome;
 		this.sobrenome = sobrenome;

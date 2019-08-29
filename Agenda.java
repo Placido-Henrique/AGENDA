@@ -1,31 +1,24 @@
 package lab3;
 
-import java.util.Scanner;
-
 public class Agenda {
-	private Contato[] agenda = new Contato[100];
+	String nome;
+	private Contato[] agenda;
 	
-	public static void main(String[] args) {
-		do {
-			System.out.println("Cadastrar contato: (C)");
-			System.out.println("Listar contatos: (L)");
-			System.out.println("Exibir contato: (E)");
-			System.out.println("Sair: (S)");
-			Scanner sc = new Scanner(System.in);
-			System.out.println("");
-			System.out.print("Escolha uma opção: ");
-			String opcao = sc.nextLine();
-
-			switch (opcao){
-				case "c":
-					System.out.print("Posição: ");
-					
-					break;
-				case "l":
-					break;
-				case "e":
-					break;
-			}
-		} while (opcao != "s");
-		}
+	public Agenda(String nome) {
+		this.agenda = new Contato[100];
+		this.nome = nome;
+	}
+	
+	public void cadastraContato(int indice,String nome, String sobrenome, String telefone) {
 		
+		Contato contato = new Contato(indice, nome, sobrenome, telefone);
+//		agenda1.cadastraContato(pos,contato);
+		System.out.println("Cadastro realizado!");
+//		this.agenda[pos] = contato;
+	}
+	
+	public String listaContatos(){
+		return agenda.toString();
+	}
+
+}
