@@ -12,5 +12,13 @@ public class Contato {
 		this.sobrenome = sobrenome;
 		this.telefone = telefone;
 	}
+	
+	public String exibe() {
+		return nome + " " + sobrenome + " " + telefone;
+	}
+	
+	public String toStr() {
+		return indice+1 + " - "+ nome + " " + sobrenome;
+	}
 
 }
